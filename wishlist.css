@@ -163,22 +163,66 @@ position:absolute;
 background-color: #33383b;
 width:200px;
 height:120px;
-
+text-align: center;
+color:white;
+padding-top:45px;
+font-size: larger;
 }
 #drugi{
   position:absolute;
   top:20%;
   left:55%;
 background-color: #33383b;
-width:200px;
+width:201px;
 height:120px;
+text-align: center;
+color:white;
+padding-top:45px;
+font-size: larger;
 
 }
 #treci{
-  position:absolute;
+position:absolute;
   top:20%;
   left:75%;
 background-color: #33383b;
-width:200px;
+width:201px;
 height:120px;
+text-align: center;
+color:white;
+padding-top:45px;
+font-size: larger;
+}
+
+
+#loginpopup{
+  position: absolute;
+    top:25%;
+    left:35%;
+  width:500px;
+  height:330px;
+  margin-top:100px;
+  background-color:white;
+  border-radius:9px;
+  border-color:2px solid rgb(107, 8, 8);
+  padding:10px;
+  box-sizing:border-box;
+  font-family:helvetica;
+  z-index: 10;
+  visibility: hidden;
+  display:none;
+  
+
+
+}
+
+#loginforma{
+  margin-top:60px;
+
+}
+
+#loginpopup > i{
+margin-left:465px;
+size:250%;
+
 }

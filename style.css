@@ -98,3 +98,16 @@ body{
     align-items: center;
 
 }
+
+#searchbar{
+    border-radius: 25px;
+}
+#searchbutton{
+    border-radius:50px;
+    background-color:black;
+    border:none;
+}
+#searchbutton:hover{
+    background-color: black;
+
+}
