@@ -13,6 +13,31 @@ let Apartman = function(slika, naslov){
     document.getElementById("wrapper").append(kartica); 
     karticaimg.src = slika; //postavlja pozadinu
     karticanaslov.innerHTML= naslov; //postavi sta ce pisat u h4
+
+    let popup = document.getElementById("popup")
+    let x = document.getElementById("close");
+    let popupContent = document.getElementById("popup-content");
+    kartica.addEventListener("click", otvori);
+    x.addEventListener("click", zatvori);
+    function otvori(){
+        popup.classList.add("popup");
+        x.classList.add("close");
+        popupContent.classList.add("popup-content");
+        x.style.display="block";
+        popupContent.appendChild(x);
+        popupContent.appendChild(karticanaslov);
+        popupContent.appendChild(karticaimg);
+        
+    }
+    function zatvori(){
+        kartica.appendChild(karticaimg);
+        kartica.appendChild(karticanaslov);
+        popupContent.removeChild(x);
+        popupContent.classList.remove("popup-content");
+        x.classList.remove("close");
+        popup.classList.remove("popup");
+//triban ovamo dodat jos da se property-i u divu ne maknu kad se otvori pop-up
+    }
     
 }
 
@@ -44,5 +69,5 @@ $(document).ready(function(){
         $("#sidebar").animate({left:"-10%"},150);
     });
 
-
+//ovde ima neki manji problem koji triban popravit
 });
