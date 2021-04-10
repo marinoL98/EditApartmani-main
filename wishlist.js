@@ -14,12 +14,17 @@ $( function() {
    function PopupLogin(){
     $("#loginpopup").fadeIn();
     $("#loginpopup").css({"visibility":"visible","display":"block"})
-    
+   
     $("nav,footer,div:not(#loginpopup)").css({ //koristia san nav footer div umisto cili body jer inace ne radi
       'filter':'blur(13px)',
    });
 
+   //var imevalue = $("#valueimena").val();  ne radi
+   //$(".ime").text(imevalue);
+
    }
+
+
 
    $("#exitbtn").click(function(){
     hidepopuplogin();
@@ -35,6 +40,8 @@ $( function() {
 
 
     }
+
+
 
 
     //povratne info popup
@@ -67,6 +74,40 @@ $( function() {
    
    
        }
+
+
+      //placanje popup
+       $("#treci").click(function(){
+        PopupPlacanje();
+        });
+     
+        function PopupPlacanje(){
+         $("#placanjepopup").fadeIn();
+         $("#placanjepopup").css({"visibility":"visible","display":"block"})
+        
+         $("nav,footer,div:not(#placanjepopup)").css({ //koristia san nav footer div umisto cili body jer inace ne radi
+           'filter':'blur(13px)',
+        });
+     
+     
+        }
+     
+     
+     
+        $("#exitbtn3").click(function(){
+         hideplacanjepopup();
+        });
+     
+     
+        function hideplacanjepopup(){
+         $("#placanjepopup").fadeOut();
+         $("#placanjepopup").css({"visibility":"hidden","display":"none"});
+         $("nav,footer,div:not(#placanjepopup)").css({ //koristia san nav footer div umisto cili body jer inace ne radi
+           'filter':'blur(0px)',
+        });
+     
+     
+         }
    
 
 });
