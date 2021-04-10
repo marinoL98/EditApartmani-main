@@ -1,4 +1,4 @@
-let Apartman = function(slika, naslov , lokacija , cijena){
+let Apartman = function(slika, naslov, lokacija, cijena){
     this.slika = slika;
     this.naslov = naslov;
     this.lokacija = lokacija;
@@ -9,6 +9,7 @@ let Apartman = function(slika, naslov , lokacija , cijena){
     let karticanaslov = document.createElement("h4");
     let karticalokacija = document.createElement("h6");
     let karticacijena = document.createElement("h6"); //stvaranje elementa
+    kartica.style.height = "max-content";
     kartica.appendChild(karticaimg);
     kartica.appendChild(karticanaslov);
     kartica.appendChild(karticalokacija);
@@ -18,13 +19,10 @@ let Apartman = function(slika, naslov , lokacija , cijena){
     kartica.classList.add("cardimg"); //ko attributre samo malo kraca i zgodnija linija
     document.getElementById("wrapper").append(kartica); 
     karticaimg.src = slika; //postavlja pozadinu
-<<<<<<< HEAD
     karticanaslov.innerHTML= naslov;
     karticacijena.innerHTML=cijena;
     karticalokacija.innerHTML=lokacija; //postavi sta ce pisat u h4
-=======
     karticanaslov.innerHTML= naslov; //postavi sta ce pisat u h4
->>>>>>> 825f1fa6fe4b5cace9c5adbd983068b17bd91dac
 
     let popup = document.getElementById("popup")
     let x = document.getElementById("close");
@@ -39,11 +37,15 @@ let Apartman = function(slika, naslov , lokacija , cijena){
         popupContent.appendChild(x);
         popupContent.appendChild(karticanaslov);
         popupContent.appendChild(karticaimg);
+        popupContent.appendChild(karticalokacija);
+        popupContent.appendChild(karticacijena);
         
     }
     function zatvori(){
         kartica.appendChild(karticaimg);
         kartica.appendChild(karticanaslov);
+        kartica.appendChild(karticalokacija);
+        kartica.appendChild(karticacijena);
         popupContent.removeChild(x);
         popupContent.classList.remove("popup-content");
         x.classList.remove("close");
