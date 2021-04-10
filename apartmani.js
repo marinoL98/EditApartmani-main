@@ -18,9 +18,13 @@ let Apartman = function(slika, naslov , lokacija , cijena){
     kartica.classList.add("cardimg"); //ko attributre samo malo kraca i zgodnija linija
     document.getElementById("wrapper").append(kartica); 
     karticaimg.src = slika; //postavlja pozadinu
+<<<<<<< HEAD
     karticanaslov.innerHTML= naslov;
     karticacijena.innerHTML=cijena;
     karticalokacija.innerHTML=lokacija; //postavi sta ce pisat u h4
+=======
+    karticanaslov.innerHTML= naslov; //postavi sta ce pisat u h4
+>>>>>>> 825f1fa6fe4b5cace9c5adbd983068b17bd91dac
 
     let popup = document.getElementById("popup")
     let x = document.getElementById("close");
